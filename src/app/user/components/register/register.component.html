@@ -1,0 +1,79 @@
+<div class="container-fluid background-form">
+
+    <form [formGroup]="registerForm" class="col-lg-7 p-lg-4 form-ww">
+        <h3 class="text-light-blue text-center mb-5">S'inscrire</h3>
+        <hr class="text-light-blue">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="text-light-blue col-lg-2 mb-2">
+                    <div class="form-group">
+                        <label for="gender" class="form-label">Genre :</label>
+                        <select class="input-ww form-select" formControlName="gender" id="gender">
+                            <option value="women">Mme</option>
+                            <option value="men">M</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-light-blue col-lg-5 mb-2">
+                    <div class="form-group">
+                        <label for="firstname" class="form-label">Prénom :</label>
+                        <input class="input-ww form-control bg-opacity-50" type="text" formControlName="firstname">
+                    </div>
+                </div>
+
+                <div class="text-light-blue col-lg-5 mb-2">
+                    <div class="form-group">
+                        <label for="lastname" class="form-label">Nom :</label>
+                        <input class="input-ww form-control bg-opacity-50" type="text" formControlName="lastname">
+                    </div>
+                </div>
+
+                <div class="text-light-blue col-lg-9 mb-2">
+                    <div class="form-group">
+                        <label for="address" class="form-label">Adresse :</label>
+                        <input class="input-ww form-control" type="text" formControlName="address">
+                    </div>
+                </div>
+
+                <div class="text-light-blue col-lg-3 mb-2">
+                    <div class="form-group">
+                        <label for="birthdate" class="form-label">Date de naissance :</label>
+                        <input class="input-ww form-control" type="date" formControlName="birthdate">
+                    </div>
+                </div>
+
+                <div class="text-light-blue mb-2">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email* :</label>
+                        <input class="input-ww form-control" type="email" formControlName="email">
+                    </div>
+                </div>
+                <div class="text-light-blue mb-2">
+                    <div class="form-group">
+                        <label for="password" class="form-label">Mot de passe* :</label>
+                        <input class="input-ww form-control" type="password" formControlName="password" required>
+                    </div>
+                </div>
+
+                <div class="text-light-blue mb-2">
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Vérification du mot de passe* :</label>
+                        <input class="input-ww form-control" type="password" formControlName="confirmPassword" required>
+                    </div>
+                </div>
+                <div class="text-light-blue my-2">{{ feedback }}</div>
+                <div class="text-warning my-2">{{ error }}</div>
+
+                <div class="text-center">
+                    <button [disabled]="!registerForm.valid" class="button-ww button-green mb-3 w-100"
+                        (click)="onSubmit()">S'inscrire</button>
+                </div>
+                <hr class="text-light-blue">
+                <p class="text-warning">* : champs obligatoires</p>
+            </div>
+        </div>
+    </form>
+</div>

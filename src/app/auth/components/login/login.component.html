@@ -1,0 +1,38 @@
+<div class="container-fluid background-form">
+
+    <form [formGroup]="loginForm" class="col-lg-4 p-lg-4 form-ww">
+
+        <h3 class="text-light-blue text-center mb-5">Connexion</h3>
+        <hr class="text-light-blue">
+        <div class="container">
+
+            <div class="row">
+                <div class="text-light-blue mb-5">
+                    <div class="form-group">
+                        <label for="username" class="form-label">Email :</label>
+                        <input class="input-ww form-control" type="email" formControlName="username">
+                    </div>
+                </div>
+                <div class="text-light-blue mb-4">
+                    <div class="form-group">
+                        <label for="password" class="form-label">Mot de passe :</label>
+                        <input class="input-ww form-control" type="password" formControlName="password" required>
+                    </div>
+                </div>
+
+                <div class="text-light-blue my-2">{{ feedback }}</div>
+                <div class="text-warning my-2">{{ error }}</div>
+
+                <hr class="text-light-blue">
+
+                <div class="text-center">
+                    <button [disabled]="!loginForm.valid" class="button-ww button-green" (click)="onSubmit()">Se connecter</button>
+                </div>
+
+                <div class="mt-4">
+                    <p>Vous n'avez pas encor de compte? inscrivez vous <a routerLink="/register">ici</a></p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

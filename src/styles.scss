@@ -1,1 +1,158 @@
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
 /* You can add global styles to this file, and also import other style files */
+/* :root {
+    --color-1: #04364A;
+    --color-2: #176B87;
+    --color-3: #64CCC5;
+    --color-4: #DAFFFB;
+    --color-5: #64da9d;
+} */
+:root {
+    --color-1: #172026;
+    --color-2: #027373;
+    --color-3: #5FCDD9;
+    --color-4: #04BFAD;
+    --color-5: #04BF9D;
+    --color-white: white;
+}
+
+@font-face {
+    font-family: "jura-regular";
+    src: url('assets/fonts/Jura-Regular.ttf');
+}
+
+.button-ww {
+    color: var(--color-1);
+    font-size: large;
+    padding: 8px 20px;
+    border-radius: 40px;
+}
+
+.button-green {
+    background-color: var(--color-5);
+    border: 2px solid var(--color-5);
+}
+
+.button-green:hover {
+    background-color: var(--color-5);
+    color: var(--color-1);
+    box-shadow: 0 0 2px 2px var(--color-5);
+}
+
+.button-ww:disabled {
+    color: var(--color-1);
+    background-color: grey;
+    border: 2px solid grey;
+    box-shadow: none;
+}
+
+.button-blue {
+    background-color: var(--color-3);
+    border: 2px solid var(--color-3);
+}
+
+.button-blue:hover {
+    background-color: var(--color-3);
+    color: var(--color-1);
+    box-shadow: 0 0 2px 2px var(--color-3);
+}
+
+.link-ww {
+    text-decoration: none;
+    color: var(--color-4);
+}
+
+.link-ww:hover, .link-ww:focus {
+    color: var(--color-4);
+    text-decoration: none;
+    transition-duration: 1s;
+}
+
+.input-ww {
+    border-radius: 40px;
+}
+
+.input-ww:focus {
+    box-shadow: 0 0 0 3px var(--color-5);
+}
+
+.navbar-ww {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-1);
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.navbar-toggler {
+    color: var(--color-4);
+}
+
+.title {
+    background-image: url('assets/images/home_page.jpg');
+    color: var(--color-white);
+    padding: 10rem 3rem 10rem 3rem;
+}
+
+.title-1 {
+    font-family: 'jura-regular';
+    font-weight: bold;
+    font-size: 10rem;
+}
+
+.title-2 {
+    font-family: 'jura-regular';
+    margin: 3rem 0 2rem 0;
+}
+
+.title-3 {
+    font-family: 'jura-regular';
+}
+
+.background-form {
+    background-image: url('assets/images/home_page.jpg');
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-ww {
+    color: var(--color-4);
+    border-radius: 7px;
+    background-color: var(--color-1);
+}
+
+.services-card {
+    padding: 1rem;
+}
+
+.img-ww {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.order-card {
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer-ww {
+    color: var(--color-4);
+    background-color: var(--color-1);
+}
+
+.copyright-ww {
+    color: var(--color-1);
+    background-color: var(--color-4);
+    text-align: center;
+    padding: 1.5rem;
+}

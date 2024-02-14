@@ -1,0 +1,59 @@
+<div class="container-fluid">
+
+    <section id="title" class="row title">
+        <div class="col-12">
+            <h1 class="title-1">WaveWash</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+
+    <section id="services" class="row justify-content-center mb-5">
+        <h2 class="title-2 col-12">Nos services :</h2>
+        <div class="col-lg-3 col-md-3 col-sm-12 services-card" *ngFor="let service of services$ | async">
+            <div>
+                <img src="../../../assets/images/services.jpg" alt="services photo" class="img-ww">
+            </div>
+            <h3 class="title-3">{{ service.name | titlecase }}</h3>
+            <p>{{ service.description }}</p>
+        </div>
+        <div class="col-12 text-center my-3">
+            <a class="button-ww button-green text-decoration-none col-2 text-center" *ngIf="isLogged()"
+                href="/login">Commander</a>
+            <a class="button-ww button-green text-decoration-none col-2 text-center" *ngIf="isLogged() === false"
+                href="/login">Commander</a>
+        </div>
+    </section>
+
+    <section id="aboutUs" class="row mb-5">
+        <h2 class="title-2">A propos de WaveWash</h2>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <img src="../../../assets/images/about-us.jpg" alt="photo de pressing" class="img-ww">
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam autem fuga nostrum ipsam! Ratione
+                autem placeat odio, ipsum assumenda nobis expedita impedit accusamus nam perspiciatis vero illum hic
+                quod ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium corrupti consequuntur
+                dicta rerum incidunt necessitatibus quibusdam atque suscipit obcaecati. Maxime expedita enim
+                cupiditate labore, corporis vero tempore error facere totam?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta dolor nisi? Quo quas vero natus
+                ipsa earum ut, temporibus accusamus animi, minima ducimus dolorum accusantium, quaerat repellendus?
+                Harum, sapiente?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente ex ipsum illum totam corporis laboriosam neque quod? Aliquam libero, repellendus itaque odit iusto tenetur dignissimos ipsa ex, amet nobis incidunt!</p>
+        </div>
+    </section>
+
+    <section id="location" class="row mb-5">
+        <h2 class="title-2">Où nous trouver</h2>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, consequatur, omnis maiores, laborum
+                ratione mollitia at rerum numquam eligendi libero sequi. Qui ipsam velit accusamus accusantium enim
+                dolorem numquam animi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim eveniet, sit,
+                sed optio eaque facere nulla corporis amet cum dicta ipsam autem! Voluptates voluptatum quia
+                voluptatibus, rerum aut culpa iusto.</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <a href="https://www.google.fr/maps/" target="_blank"><img src="../../../assets/images/map.png"
+                    alt="carte du pressing" class="img-ww"></a>
+        </div>
+    </section>
+</div>
