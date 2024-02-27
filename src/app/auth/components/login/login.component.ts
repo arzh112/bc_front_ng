@@ -20,7 +20,6 @@ export class LoginComponent {
   })
 
   onSubmit(){
-    console.log(this.loginForm.valid);
     this.authService.signIn(this.loginForm.value);
   }
 }

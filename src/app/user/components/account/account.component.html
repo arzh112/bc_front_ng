@@ -4,68 +4,38 @@
         <h2 class="title-2">Bonjour {{ user.firstname }}, retrouvez toutes vos commandes :</h2>
     </div>
 
-    <h3 class="title-2">Prêtes à retirer :</h3>
-    
-    <table class="table table-success table-striped">
-        <thead>
-            <tr>
-                <th>Numéro</th>
-                <th>Status</th>
-                <th>Contenu</th>
-                <th>Total</th>
-                <th>Date de retrait</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let order of orders">
-            <tr *ngIf="order.status === 'ready'">
-                <td>{{ order.id }}</td>
-                <td>{{ order.status }}</td>
-                <td>{{ order.content | json }}</td>
-                <td>{{ order.totalPrice / 100 | currency: 'EUR' }}</td>
-                <td>{{ order.pickUp | date: 'd MMMM yyyy à hh:mm'}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <h3 class="title-2 col-12">Prêtes à retirer :</h3>
 
-    <h3 class="title-2">En cours de traitement:</h3>
+        <div *ngFor="let order of readyOrders" class="col-lg-3 col-md-6 col-sm-12">
+            <app-order [order]="order"></app-order>
+        </div>
+    </div>
 
-    <table class="table table-warning table-striped">
-        <thead>
-            <tr>
-                <th>Numéro</th>
-                <th>Status</th>
-                <th>Contenu</th>
-                <th>Total</th>
-                <th>Date de retrait</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let order of orders">
-            <tr *ngIf="order.status === 'waiting' || order.status === 'preparing'">
-                <td>{{ order.id }}</td>
-                <td>{{ order.status }}</td>
-                <td>{{ order.content }}</td>
-                <td>{{ order.totalPrice / 100 | currency: 'EUR' }}</td>
-                <td>{{ order.pickUp | date: 'd MMMM yyyy à hh:mm'}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <h3 class="title-2">En cours de traitement:</h3>
 
-    <h3 class="title-2">Récupérées :</h3>
+        <div *ngFor="let order of prepOrders" class="col-lg-3 col-md-6 col-sm-12">
+            <app-order [order]="order"></app-order>
+        </div>
+    </div>
+
+    <h3 class="title-2">Historique :</h3>
     <table class="table table-primary table-striped">
         <thead>
             <tr>
                 <th>Numéro</th>
                 <th>Status</th>
-                <th>Contenu</th>
+                <!-- <th>Contenu</th> -->
                 <th>Total</th>
                 <th>Date de retrait</th>
             </tr>
         </thead>
         <tbody *ngFor="let order of orders">
-            <tr *ngIf="order.status === 'collected'">
+            <tr *ngIf="order.status === 'récupérée'">
                 <td>{{ order.id }}</td>
                 <td>{{ order.status }}</td>
-                <td>{{ order.content | json }}</td>
+                <!-- <td>{{ order.content | json }}</td> -->
                 <td>{{ order.totalPrice / 100 | currency: 'EUR' }}</td>
                 <td>{{ order.pickUp | date: 'd MMMM yyyy à hh:mm'}}</td>
             </tr>

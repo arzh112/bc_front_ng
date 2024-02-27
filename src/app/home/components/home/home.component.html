@@ -9,7 +9,7 @@
 
     <section id="services" class="row justify-content-center mb-5">
         <h2 class="title-2 col-12">Nos services :</h2>
-        <div class="col-lg-3 col-md-3 col-sm-12 services-card" *ngFor="let service of services$ | async">
+        <div class="col-lg-3 col-md-4 col-sm-12 services-card" *ngFor="let service of services$ | async">
             <div>
                 <img src="../../../assets/images/services.jpg" alt="services photo" class="img-ww">
             </div>
@@ -18,9 +18,9 @@
         </div>
         <div class="col-12 text-center my-3">
             <a class="button-ww button-green text-decoration-none col-2 text-center" *ngIf="isLogged()"
-                href="/login">Commander</a>
+                routerLink="login">Commander</a>
             <a class="button-ww button-green text-decoration-none col-2 text-center" *ngIf="isLogged() === false"
-                href="/login">Commander</a>
+                routerLink="login">Commander</a>
         </div>
     </section>
 

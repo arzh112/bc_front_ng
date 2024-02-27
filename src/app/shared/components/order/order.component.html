@@ -1,0 +1,12 @@
+<div class="order-card" [ngClass]="order.status === 'prête' ? 'bg-green' : 'bg-blue'" >
+    <div class="d-flex justify-content-between">
+        <div>No : {{ order.id }}</div>
+        <div>Total : {{ order.totalPrice / 100 | currency: 'EUR' }}</div>
+        <div> {{ order.status }}</div>
+    </div>
+    <hr>
+    <div class="d-flex justify-content-between">
+        <div>Déposé le : <br>{{ order.deposit | date }}</div>
+        <div>Retrait prévu le : <br>{{ order.pickUp | date: 'd MMMM yyyy à hh:mm' }}</div>
+    </div>
+</div>

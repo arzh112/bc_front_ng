@@ -16,13 +16,13 @@
 
             <div class="">
                 <div *ngIf="isLogged() === true" class="d-flex justify-content-between">
-                    <button class="button-ww button-green mx-2" routerLink="/user/account">Compte</button>
+                    <button class="button-ww button-green mx-2" routerLink="user/account">Compte</button>
                     <button class="button-ww button-blue mx-2" (click)="logout()" href="#">Déconnexion</button>
                 </div>
 
                 <div *ngIf="isLogged() === false" class="d-flex justify-content-between">
-                    <button class="button-ww button-green mx-2" routerLink="/login">Connexion</button>
-                    <button class="button-ww button-blue mx-2" routerLink="/user/register">Inscription</button>
+                    <button class="button-ww button-green mx-2" routerLink="login">Connexion</button>
+                    <button class="button-ww button-blue mx-2" routerLink="user/register">Inscription</button>
                 </div>
             </div>
         </div>

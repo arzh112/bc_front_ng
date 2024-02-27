@@ -36,7 +36,7 @@ export class AuthService {
     this.router.navigate(["/login"]);
   }
 
-  isLogged(): boolean {
+  isAuthenticated(): boolean {
     const token = localStorage.getItem('token');
     return !! token;
   }

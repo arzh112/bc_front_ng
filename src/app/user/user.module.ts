@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { RegisterComponent } from './components/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './components/account/account.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { AccountComponent } from './components/account/account.component';
   imports: [
     CommonModule,
     UserRoutingModule,
-    ReactiveFormsModule
+    SharedModule
+
   ],
   exports: [
     RegisterComponent,

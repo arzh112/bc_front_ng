@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   isLogged(): boolean {
-    if(this.authService.isLogged()) {
+    if(this.authService.isAuthenticated()) {
       return true;
     }
     return false;

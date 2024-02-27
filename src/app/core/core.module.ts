@@ -4,7 +4,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { httpInterceptorProviders } from './interceptors';
 import * as fr from '@angular/common/locales/fr';
@@ -20,8 +19,6 @@ import * as fr from '@angular/common/locales/fr';
     CommonModule,
     SharedModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
     RouterModule
   ],
   exports: [
