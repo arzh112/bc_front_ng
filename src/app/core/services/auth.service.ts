@@ -38,6 +38,7 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     const token = localStorage.getItem('token');
+    // si la constante token est vide retourné false, sinon retourné true
     return !! token;
   }
 }

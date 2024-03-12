@@ -1,9 +1,9 @@
 import { Service } from "./service";
 
 export interface Article {
-    id?: number;
+    id: number;
     name: string;
-    price?: number;
-    description?: string;
-    services?: Service[];
+    price: number;
+    description: string;
+    services: Service[];
 }

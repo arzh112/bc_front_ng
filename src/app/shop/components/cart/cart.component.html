@@ -1,0 +1,11 @@
+<div class="cart-ww text-center">
+    <h2>Votre panier</h2>
+    <hr>
+    <div *ngFor="let line of lines" class="d-flex justify-content-around">
+        <div>{{ line.quantity }}</div>
+        <div>{{ line.article.name | titlecase }}</div>
+        <div>{{ line.service.name | titlecase }}</div>
+        <div>{{ line.price / 100 | currency: 'EUR' }}</div>
+        <hr>
+    </div>
+</div>
